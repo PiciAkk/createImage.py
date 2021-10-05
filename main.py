@@ -14,7 +14,7 @@ def main():
             # 200
             "color": list(map(int, [request.form["textR"], request.form["textG"], request.form["textB"]])),
             # 255, 255, 0
-            "textPosition": list(map(int, [request.form["textPositionW"], request.form["textPositionH"]]))
+            "textPosition": list(map(int, [request.form["textPositionX"], request.form["textPositionY"]]))
             # 10, 10
         }
 
@@ -30,7 +30,7 @@ def main():
 
         makeImage(photoWidth, photoHeight, Background, Text)
 
-        return render_template('index.html')
+        return "Image generated..."
 
     else:
         return "Unknown method..."
