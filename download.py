@@ -20,6 +20,7 @@ if x.text == "Image generated...":
     img_data = requests.get("http://localhost:5000/static/currentImage.png").content
     with open('downloadedImage.png', 'wb') as handler:
         handler.write(img_data)
+    os.system("clear")
     os.system("tiv downloadedImage.png")
 else:
     exit
