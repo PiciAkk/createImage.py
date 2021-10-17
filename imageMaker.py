@@ -13,11 +13,15 @@ def makeImage(photoWidth, photoHeight, Background, Text):
     d.text((Text["textPosition"][0], Text["textPosition"][1]), Text["text"], font=fnt, fill=(Text["color"][0], Text["color"][1], Text["color"][2]))
     # save
     img.save('static/currentImage.png')
-    # delete
-    threading.Thread(target=deleteImage).start()
 
 def deleteImage():
     # wait
     time.sleep(0.1)
     # remove
     os.remove("static/currentImage.png")
+
+def makeImageAndDeleteIt(photoWidth, photoHeight, Background, Text):
+    # make image
+    makeImage(photoWidth, photoHeight, Background, Text)
+    # delete it
+    threading.Thread(target=deleteImage).start()

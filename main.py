@@ -1,5 +1,5 @@
 from flask import *
-from imageMaker import makeImage, deleteImage
+from imageMaker import makeImage
 import time
 
 app = Flask(__name__)
@@ -26,7 +26,7 @@ def main():
         # 1920
         photoHeight = int(request.form["photoHeight"])
         # 1080
-        makeImage(photoWidth, photoHeight, Background, Text)
+        makeImageAndDeleteIt(photoWidth, photoHeight, Background, Text)
         return "Image generated..."
 
     else:
