@@ -1,9 +1,8 @@
 # createImage.py
 Python-based image generator with a web API
 ---
-Documentation coming soon...
 
-## Usage
+## Installation
 
 - Clone this repository
 ```bash
@@ -13,6 +12,13 @@ git clone https://github.com/piciakk/createImage.py
 ```bash
 cd createImage.py
 ```
+- Install all the dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
 - Run the webserver
 ```bash
 python main.py
